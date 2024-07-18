@@ -1,6 +1,7 @@
 # ARCX-TURBINES-SCRAPHEAP
 This is the WIP being REBUILT BY GPTE in CURRENTLY IN PROGRESS
 if i cant figure this out ohwell.
+if you want the legacy seperated (i've lost the right versions but i am sure there is a link or just prune it down to whatever---nothing matters really)
 
 7/17/2024
 # ArcxTurbine-Scratch
