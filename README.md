@@ -44,6 +44,9 @@ and virtual headset and minecraft
 
 this is "decent" enough to satiate my stupid ass for now (it started out i was using 5500xt and r5 and r7 processors with vulkan and upgraded them eventually to a 6600xt)---so my perspective has shifted a little from what i started out based off the computer build
 So i just pretend I jury rig all this into my minecraft level and pretend i can vr it and that works i guess. i know its pathetic but also this has been just a massive cope for me that someone might make it come true.
+later i just ended up buying a new pc with the above specs and a 7900xtx if you want to spend the 3k for that kind of system (and or obviously it will be less by now---you wont regret it that much)--this makes me feel like i might just have what it takes with what i got
+
+but tbh, i still want a better system like a 9000xtx but they just dont have those yet.
 
 i really want to just convert minecraft to a unity-based world with my minecraft-world-i-design into it so it looks real so maybe i feel better than just staring and LITERAL GOD DAMN BLOCKS lol and not taking this directly to MARS which i think would also be a dumb thing to do since i rather live minding my own business in my own -virtual-acre-land-house-
 look dood, my brain is just destroyed im just trying to pass this info on to someone who can use whats left to be used here.
