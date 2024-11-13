@@ -1,0 +1,2066 @@
+
+const fs = require('fs');
+const zlib = require('zlib');
+
+// Compress a file using gzip
+function compressFile(filePath) {
+  const fileBuffer = fs.readFileSync(filePath);
+  const compressedBuffer = zlib.gzipSync(fileBuffer);
+  return compressedBuffer;
+}
+
+// Create an index of the FATFILE/SCRAPHEAP data
+function createIndex() {
+  // Implement a B-tree or hash table to store the index
+  const index = new Map();
+  // ...
+}
+
+
+// Entity Manager
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+}
+
+// Physics Engine
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+}
+
+// Renderer
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+// Entity Manager
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+}
+
+// Physics Engine
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+}
+
+// Renderer
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+
+// Entity Manager
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+}
+
+// Physics Engine
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+}
+
+// Renderer
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+// Import the font library
+const fonts = require('font-libs');
+
+// Select a font from the library
+const font = fonts.selectFont('Arial', 12);
+
+// Render text on the screen using the selected font
+function renderText(text, x, y) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  ctx.font = `${font.size}px ${font.family}`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillStyle = '#000000';
+  ctx.fillText(text, x, y);
+  return canvas.toDataURL();
+}
+
+// Render text on the screen
+const text = 'Hello, World!';
+const x = 100;
+const y = 100;
+const dataURL = renderText(text, x, y);
+
+// Import the font library
+const fonts = require('font-libs');
+
+// Select a font from the library
+const font = fonts.selectFont('Arial', 12);
+
+// Render text on the screen using the selected font
+function renderText(text, x, y) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  ctx.font = `${font.size}px ${font.family}`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillStyle = '#000000';
+  ctx.fillText(text, x, y);
+  return canvas.toDataURL();
+}
+
+// Render text on the screen
+const text = 'Hello, World!';
+const x = 100;
+const y = 100;
+const dataURL = renderText(text, x, y);
+
+Conclusion:
+Building text-based interfaces requires a robust font library, efficient text rendering algorithms, and careful consideration of various factors such as font selection, text alignment, and color.
+
+By implementing these features, we can create high-quality text-based interfaces that are optimized for performance and rendering quality.
+
+00-Deep-Core-Base-Repo
+
+00-Deep-Core-Base-Repo
+
+The following is a 00-Deep-Core-Base-Repo to get started with the game engine development project.
+
+Directory Structure:
+
+game-engine/
+├── src/
+│   ├── core/
+│   │   ├── entity-manager.js
+│   │   ├── physics-engine.js
+│   │   └── renderer.js
+│   ├── compression-library/
+│   │   ├── gzip.js
+│   │   └── zlib.js
+│   ├── indexing-algorithm/
+│   │   ├── b-tree.js
+│   │   └── hash-table.js
+│   ├── text- rendering-engine/
+│   │   ├── font-library/
+│   │   │   ├── fonts.js
+│   │   │   └── select-font.js
+│   │   ├── text-rendering-algorithm/
+│   │   │   ├── render-text.js
+│   │   │   └── text- rendering-engine.js
+│   │   ├── example-code/
+│   │   │   ├── example1.js
+│   │   │   └── example2.js
+│   │   └── ...
+│   ├── text-builds/
+│   │   ├── render-text.js
+│   │   └── ...
+│   └── ...
+├── test/
+│   ├── core/
+│   │   ├── entity-manager-test.js
+│   │   ├── physics-engine-test.js
+│   │   └── renderer-test.js
+│   ├── compression-library/
+│   │   ├── gzip-test.js
+│   │   └── zlib-test.js
+│   ├── indexing-algorithm/
+│   │   ├── b-tree-test.js
+│   │   └── hash-table-test.js
+│   ├── text-rendering-engine/
+│   │   ├── font-library/
+│   │   │   ├── fonts-test.js
+│   │   │   └── select-font-test.js
+│   │   ├── text-rendering-algorithm/
+│   │   │   ├── render-text-test.js
+│   │   │   └── text- rendering-engine-test.js
+│   │   ├── example-code/
+│   │   │   ├── example1-test.js
+│   │   │   └── example2-test.js
+│   │   └── ...
+│   ├── text-builds/
+│   │   ├── render-text-test.js
+│   │   └── ...
+│   └── ...
+├── package.json
+└── README.md
+
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+
+  collideWith(otherEntity) {
+    if (this.entities[otherEntity.id]) {
+      const position = otherEntity.position;
+      const velocity = otherEntity.velocity;
+
+      // Check for collision
+      if (Math.sqrt((position.x - this.position.x) ** 2 + (position.y - this.position.y) ** 2) < 10) {
+        // Collision detected, apply forces
+        this.applyForces(otherEntity);
+        otherEntity.applyForces(this);
+      }
+    }
+  }
+
+  applyForces(entity) {
+    const force = { x: entity.velocity.x * 0.1, y: entity.velocity.y * 0.1 };
+    entity.position += force;
+  }
+}
+
+Rendering:
+
+To integrate rendering into our game engine, we will create a Renderer class that handles the display of the game world on the screen.
+
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+Putting it all Together:
+
+Now that we have implemented the EntityManager, PhysicsEngine, and Renderer classes, let's put them all together to create a basic game engine.
+
+class GameEngine {
+  constructor() {
+    this.entityManager = new EntityManager();
+    this.physicsEngine = new PhysicsEngine();
+    this.renderer = new Renderer();
+
+    // Initialize entities
+    const entity1 = this.entityManager.createEntity('Player', { x: 10, y: 10 });
+    const entity2 = this.entityManager.createEntity('Enemy', { x: 20, y: 20 });
+
+    // Add physics simulation
+    this.physicsEngine.simulatePhysics([entity1, entity2]);
+
+    // Render entities
+    this.renderer.render([entity1, entity2]);
+  }
+}
+
+class CollisionDetection {
+  detectCollision(entity1, entity2) {
+    // Check for collision between two entities
+    if (Math.sqrt((entity1.position.x - entity2.position.x) ** 2 + (entity1.position.y - entity2.position.y) ** 2) < 10) {
+      // Collision detected, apply forces
+      this.applyForces(entity1);
+      this.applyForces(entity2);
+    }
+  }
+
+  applyForces(entity) {
+    const force = { x: entity.velocity.x * 0.1, y: entity.velocity.y * 0.1 };
+    entity.position += force;
+  }
+}
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+
+  collideWith(otherEntity) {
+    if (this.entities[otherEntity.id]) {
+      const position = otherEntity.position;
+      const velocity = otherEntity.velocity;
+
+      // Check for collision
+      if (Math.sqrt((position.x - this.position.x) ** 2 + (position.y - this.position.y) ** 2) < 10) {
+        // Collision detected, apply forces
+        this.applyForces(otherEntity);
+        otherEntity.applyForces(this);
+      }
+    }
+  }
+
+  applyForces(entity) {
+    const force = { x: entity.velocity.x * 0.1, y: entity.velocity.y * 0.1 };
+    entity.position += force;
+  }
+}
+
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+
+  collideWith(otherEntity) {
+    if (this.entities[otherEntity.id]) {
+      const position = otherEntity.position;
+      const velocity = otherEntity.velocity;
+
+      // Check for collision
+      if (Math.sqrt((position.x - this.position.x) ** 2 + (position.y - this.position.y) ** 2) < 10) {
+        // Collision detected, apply forces
+        this
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+
+  collideWith(otherEntity) {
+    if (this.entities[otherEntity.id]) {
+      const position = otherEntity.position;
+      const velocity = otherEntity.velocity;
+
+      // Check for collision
+      if (Math.sqrt((position.x - this.position.x) ** 2 + (position.y - this.position.y) ** 2) < 10) {
+        // Collision detected, apply forces
+        this.applyForces(otherEntity);
+        otherEntity.applyForces(this);
+      }
+    }
+  }
+
+  applyForces(entity) {
+    const force = { x: entity.velocity.x * 0.1, y: entity.velocity.y * 0.1 };
+    entity.position += force;
+  }
+}
+
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+
+  collideWith(otherEntity) {
+    if (this.entities[otherEntity.id]) {
+      const position = otherEntity.position;
+      const velocity = otherEntity.velocity;
+
+      // Check for collision
+      if (Math.sqrt((position.x - this.position.x) ** 2 + (position.y - this.position.y) ** 2) < 10) {
+        // Collision detected, apply forces
+        this.applyForces(otherEntity);
+        otherEntity.applyForces(this);
+      }
+    }
+  }
+
+  applyForces(entity) {
+    const force = { x: entity.velocity.x * 0.1, y: entity.velocity.y * 0.1 };
+    entity.position += force;
+  }
+}
+
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0.1;
+    }
+  }
+
+  collideWith(otherEntity) {
+    if (this.entities[otherEntity.id]) {
+      const position = otherEntity.position;
+      const velocity = otherEntity.velocity;
+
+      // Check for collision
+      if (Math.sqrt((position.x - this.position.x) ** 2 + (position.y - this.position.y) ** 2) < 10) {
+        // Collision detected, apply forces
+        this.applyForces(otherEntity);
+        otherEntity.applyForces(this);
+      }
+    }
+  }
+
+  applyForces(entity) {
+    const force = { x: entity.velocity.x * 0.1, y: entity.velocity.y * 0.1 };
+    entity.position += force;
+  }
+}
+
+class Renderer {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.ctx = canvas.getContext('2d');
+  }
+
+  render(entities) {
+    for (const entity of entities) {
+      // Draw entity using pixel art or shaders
+    }
+  }
+}
+
+class EntityManager {
+  constructor() {
+    this.entities = {};
+  }
+
+  createEntity(type, properties) {
+    const entity = { type, properties };
+    this.entities[entity.id] = entity;
+    return entity;
+  }
+
+  updateEntity(entityId, properties) {
+    if (this.entities[entityId]) {
+      this.entities[entityId].properties = properties;
+    }
+  }
+
+  deleteEntity(entityId) {
+    if (this.entities[entityId]) {
+      delete this.entities[entityId];
+    }
+  }
+}
+
+class PhysicsEngine {
+  constructor() {
+    this.gravity = 9.81;
+  }
+
+  simulatePhysics(entities) {
+    for (const entity of entities) {
+      const position = entity.position;
+      const velocity = entity.velocity;
+
+      // Apply gravity
+      velocity.y += this.gravity;
+
+      // Update position and velocity
+      position.x += velocity.x * 0.1;
+      position.y += velocity.y * 0
+
+continue04-Wip-Extras-Remission(Chapter3)-proxyMarket
+continue
+
+Continue04-Wip-Extras-Remission(Chapter3)-proxyMarket
+
+The following is a continuation of the game engine development project.
+
+Proxy Market:
+We will create a proxy market system that allows players to buy and sell in-game items using real-world currency. This will add a new layer of complexity to our game, but also provide a new revenue stream for us.
+
+Proxy Market Components:
+
+    Proxy Market Engine: This engine will handle the logic for creating and managing proxies.
+    Proxy Market API: This API will provide a interface for clients to interact with the proxy market engine.
+    In-Game Items: These are the items that players can buy and sell in the proxy market.
+
+Proxy Market Engine:
+
+class ProxyMarketEngine {
+  constructor() {
+    this.proxies = {};
+    this.items = {};
+  }
+
+  createProxy(proxyId, item) {
+    const proxy = { id: proxyId, item };
+    this.proxies[proxy.id] = proxy;
+    return proxy;
+  }
+
+  getProxy(proxyId) {
+    return this.proxies[proxyId];
+  }
+
+  addItem(item) {
+    if (this.items[item]) {
+      throw new Error(`Item already exists in the market: ${item}`);
+    }
+    this.items[item] = true;
+  }
+
+  removeItem(item) {
+    delete this.items[item];
+  }
+}
+
+Proxy Market API:
+
+class ProxyMarketAPI {
+  constructor() {
+    this.engine = new ProxyMarketEngine();
+  }
+
+  buyProxy(proxyId, amount) {
+    if (!this.engine.proxies[proxyId]) {
+      throw new Error(`Proxy not found: ${proxyId}`);
+    }
+    const proxy = this.engine.getProxy(proxyId);
+    if (amount > 0) {
+      this.engine.addItem({ id: proxy.id, quantity: amount });
+    } else {
+      delete this.engine.addItem({ id: proxy.id, quantity: amount });
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const proxy = this.engine.getProxy(proxyId);
+    if (amount > 0) {
+      this.engine.removeItem({ id: proxy.id, quantity: amount });
+    } else {
+      delete this.engine.removeItem({ id: proxy.id, quantity: amount });
+    }
+  }
+
+  getProxyList() {
+    return Object.values(this.engine.proxies);
+  }
+}
+
+In-Game Items:
+
+class InGameItem {
+  constructor(id, name, price) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+  }
+}
+
+class InGameMarket {
+  constructor() {
+    this.items = {};
+  }
+
+  addItem(item) {
+    if (this.items[item]) {
+      throw new Error(`Item already exists in the market: ${item}`);
+    }
+    this.items[item] = true;
+  }
+
+  removeItem(item) {
+    delete this.items[item];
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  sellProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Sell Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.sellProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+    }
+  }
+
+  getProxyList() {
+    return Array.from(this.proxyMarketAPI.getProxyList());
+  }
+}
+
+class ProxyMarketClient {
+  constructor(proxyMarketAPI) {
+    this.proxyMarketAPI = proxyMarketAPI;
+  }
+
+  buyProxy(proxyId, amount) {
+    const clientProxy = document.getElementById(`proxy-${proxyId}`);
+    if (clientProxy) {
+      const amountElement = document.createElement('input');
+      amountElement.type = 'number';
+      amountElement.value = amount;
+      clientProxy.appendChild(amountElement);
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Buy Proxy';
+      submitButton.onclick = () => {
+        this.proxyMarketAPI.buyProxy(proxyId, parseInt(amountElement.value));
+      };
+      document.body.appendChild(submitButton);
+   
+
+// Periphereal Grail Ext Phasesc04-Wip-Extras-Remission(Chapter5)
+class PeripherealGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.peripherealGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periphereal-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periphereal Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.peripherealGrailExtPhasesc04WipExtrasRemission.addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class PeripherealGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.peripherealGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periphereal-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periphereal Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.peripherealGrailExtPhasesc04WipExtrasRemission.addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class PeripherealGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.peripherealGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periphereal-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periphereal Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.peripherealGrailExtPhasesc04WipExtrasRemission.addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class PeripherealGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.peripherealGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periphereal-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periphereal Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.peripherealGrailExtPhasesc04WipExtrasRemission.addReferenceToPeripherealGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class PeripherealGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.peripherealGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periperepheral-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periperepheral Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission.addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class PeriperepheralGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periperepheral-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periperepheral Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission.addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class PeriperepheralGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periperepheral-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periperepheral Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission.addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+
+class PeriperepheralGrailExtPhasesc04WipExtrasRemission {
+  constructor() {
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission = {};
+  }
+
+  addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter) {
+    const reference = document.createElement('a');
+    reference.href = `https://example.com/periperepheral-grail-ext-phasesc04-wip-extras-remission/${chapter}`;
+    reference.textContent = 'Reference to Periperepheral Grail Ext Phasesc04-Wip-Extras-Remission Chapter';
+    this.periperepheralGrailExtPhasesc04WipExtrasRemission.addReferenceToPeriperepheralGrailExtPhasesc04WipExtrasRemission(chapter);
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+Continue04-Wip-Extras-Remission(Chapter9)-upgradesPlusWARPLANE
+
+To continue the project, you will need to implement the upgrades-plus-warplane chapter. This involves creating a new class that inherits from the existing classes and adds new functionality.
+
+class WarPlane {
+  constructor() {
+    this.warPlane = {};
+  }
+
+  createWarPlane(type, properties) {
+    const warPlane = { type, properties };
+    this.warPlane[warpId] = warPlane;
+    return warPlane;
+  }
+
+  updateWarPlane(warpId, properties) {
+    if (this.warPlane[warpId]) {
+      this.warPlane[warpId].properties = properties;
+    }
+  }
+
+  deleteWarPlane(warpId) {
+    if (this.warPlane[warpId]) {
+      delete this.warPlane[warpId];
+    }
+  }
+}
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
+class Prospers {
+  constructor() {
+    this.prosper = {};
+  }
+
+  createProspers(type, properties) {
+    const prosper = { type, properties };
+    this.prosper[proserId] = prosper;
+    return prosper;
+  }
+
+  updateProspers(proserId, properties) {
+    if (this.prosper[proserId]) {
+      this.prosper[proserId].properties = properties;
+    }
+  }
+
+  deleteProspers(proserId) {
+    if (this.prosper[proserId]) {
+      delete this.prosper[proserId];
+    }
+  }
+}
+
